@@ -1,0 +1,167 @@
+/* Testimonials Section Styles */
+.testimonials {
+  min-height: 70vh;
+  padding: 4rem 2rem;
+  background-color: #f7fafc; /* Sea shell background unchanged */
+}
+
+/* Heading Section */
+.testimonials-header {
+  margin-bottom: 3rem;
+}
+
+.testimonials-heading {
+  text-align: center;
+}
+
+.testimonials-heading h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #0B46A4; /* Deep Blue for trust */
+}
+
+.highlight {
+  color: #7CBC1F; /* Lime Green for vibrancy */
+  font-family: 'Arial', sans-serif;
+  font-weight: normal;
+  font-size: 3.5rem;
+}
+
+.testimonials-heading h3 {
+  font-size: 2rem;
+  color: #6C5045; /* Warm Brown for warmth */
+  margin-top: 0.5rem;
+}
+
+/* Testimonials Carousel */
+.testimonials-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.testimonials-carousel {
+  position: relative;
+}
+
+.testimonials-track {
+  display: flex;
+  width: calc(100% * 5 / 3); /* Adjust based on number of testimonials */
+}
+
+.testimonial-card {
+
+  flex: 0 0 calc(100% / 3); /* 3 cards visible at a time */
+  padding: 0 0.5rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border-bottom: 3px solid #0B46A4; /* Deep Blue border */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+  height: 100%;
+}
+
+.testimonial-card blockquote {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.testimonial-card blockquote::before {
+  content: '“';
+  font-size: 2rem;
+  color: #7CBC1F; /* Lime Green quote mark */
+  position: absolute;
+  left: -1rem;
+  top: -0.5rem;
+}
+
+.testimonial-card blockquote::after {
+  content: '”';
+  font-size: 2rem;
+  color: #7CBC1F; /* Lime Green quote mark */
+  position: absolute;
+  right: -1rem;
+  bottom: -0.5rem;
+}
+
+.testimonial-card h4 {
+  font-size: 1.2rem;
+  color: #6C5045; /* Warm Brown for warmth */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .testimonials-heading h2 {
+      font-size: 2.5rem;
+  }
+
+  .highlight {
+      font-size: 3rem;
+  }
+
+  .testimonials-heading h3 {
+      font-size: 1.8rem;
+  }
+
+  .testimonial-card {
+      flex: 0 0 50%; /* 2 cards visible on medium screens */
+  }
+
+  .testimonials-track {
+      width: calc(100% * 5 / 2); /* Adjust for 2 cards visible */
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+      padding: 3rem 1rem;
+  }
+
+  .testimonials-heading h2 {
+      font-size: 2rem;
+  }
+
+  .highlight {
+      font-size: 2.5rem;
+  }
+
+  .testimonials-heading h3 {
+      font-size: 1.5rem;
+  }
+
+  .testimonial-card {
+      flex: 0 0 100%; /* 1 card visible on small screens */
+  }
+
+  .testimonials-track {
+      width: calc(100% * 5); /* Adjust for 1 card visible */
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials-heading h2 {
+      font-size: 1.5rem;
+  }
+
+  .highlight {
+      font-size: 2rem;
+  }
+
+  .testimonials-heading h3 {
+      font-size: 1.2rem;
+  }
+
+  .testimonial-card blockquote {
+      font-size: 1rem;
+  }
+
+  .testimonial-card h4 {
+      font-size: 1rem;
+  }
+}

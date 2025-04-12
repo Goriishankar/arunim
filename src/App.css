@@ -1,0 +1,27 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Basic section styling for testing */
+section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+section h2 {
+  color: #1E88E5; /* Blue from logo */
+  margin-bottom: 1rem;
+}
+
+section p {
+  color: #8D6E63; /* Brown from logo */
+}

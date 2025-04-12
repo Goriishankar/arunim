@@ -1,0 +1,123 @@
+/* Services Section Styles */
+.services {
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+}
+
+/* Heading Section */
+.services-header {
+  margin-bottom: 3rem;
+}
+
+.services-heading {
+  text-align: center;
+}
+
+.services-heading h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #0B46A4; /* Deep Blue for trust */
+}
+
+.highlight {
+  color: #7CBC1F; /* Lime Green for vibrancy */
+  font-family: 'Arial', sans-serif;
+  font-weight: normal;
+  font-size: 3.5rem;
+}
+
+/* Services Grid */
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.service-card {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-icon {
+  /* background-color: #4561B7;  */
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.service-icon img {
+  width: 50px;
+  height: 50px;
+}
+
+.service-card h4 {
+  font-size: 1.5rem;
+  color: #6C5045; /* Warm Brown for warmth */
+  margin-bottom: 0.5rem;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .services-heading h2 {
+      font-size: 2.5rem;
+  }
+
+  .highlight {
+      font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+      padding: 3rem 1rem;
+  }
+
+  .services-heading h2 {
+      font-size: 2rem;
+  }
+
+  .highlight {
+      font-size: 2.5rem;
+  }
+
+  .service-card {
+      padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-heading h2 {
+      font-size: 1.5rem;
+  }
+
+  .highlight {
+      font-size: 2rem;
+  }
+
+  .service-card h4 {
+      font-size: 1.2rem;
+  }
+
+  .service-card p {
+      font-size: 0.9rem;
+  }
+}

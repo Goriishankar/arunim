@@ -1,0 +1,177 @@
+/* Team Section Styles */
+
+.team {
+  min-height: 65vh;
+  padding: 4rem 2rem;
+  background-color: #f7fafc; /* Light gray-blue for a cleaner, clinic-friendly background */
+}
+
+/* Heading Section */
+.team-header {
+  margin-bottom: 3rem;
+}
+
+.team-heading {
+  text-align: center;
+}
+
+.team-heading h2 {
+  font-size: 2.5rem; /* Slightly smaller for elegance */
+  font-weight: 600; /* Semi-bold for modernity */
+  color: #0B46A4; /* Deep Blue for trust */
+}
+
+.highlight {
+  color: #7CBC1F; /* Lime Green for vibrancy */
+  font-family: 'Inter', sans-serif; /* Modern, clean font */
+  font-weight: 500; /* Medium weight for balance */
+  font-size: 2.75rem; /* Slightly smaller for harmony */
+}
+
+/* Team Grid */
+.team-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Adjusted min width for flexibility */
+  gap: 1.5rem; /* Tighter gap for a compact look */
+}
+
+/* Team Card */
+.team-card {
+  height: auto;
+  background-color: #ffffff;
+  border-bottom: 2px solid #0B46A4; /* Thinner border for subtlety */
+  border-radius: 12px; /* Softer corners for modern UI */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05); /* Lighter shadow for depth */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added shadow transition */
+}
+
+.team-card:hover {
+  transform: translateY(-8px); /* Slightly more lift for interaction */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
+}
+
+.team-card-content {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem; /* Slightly more spacing for clarity */
+  padding: 1.5rem; /* Added padding for breathing room */
+}
+
+.team-card-image {
+  flex: 0 0 120px; /* Smaller image size for balance */
+}
+
+.team-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Softer image corners */
+  object-fit: cover; /* Ensure images fit nicely */
+}
+
+.team-card-details {
+  flex: 1;
+  text-align: left;
+}
+
+.team-card-details h2 {
+  font-size: 1.4rem; /* Slightly smaller for elegance */
+  color: #6C5045; /* Warm Brown for warmth */
+  margin-bottom: 0.5rem;
+  font-weight: 500; /* Medium weight for modernity */
+}
+
+.team-card-details p {
+  font-size: 0.95rem; /* Subtle size for readability */
+  color: #4a5568; /* Neutral gray for calm text */
+  line-height: 1.5; /* Better readability */
+}
+
+.learn-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #7CBC1F; /* Lime Green for links */
+  font-weight: 500; /* Medium weight */
+  text-decoration: none;
+  font-size: 0.9rem; /* Smaller for subtlety */
+  transition: color 0.2s ease; /* Smooth color transition */
+}
+
+.learn-more:hover {
+  color: #4561B7; /* Soft Blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .team-heading h2 {
+    font-size: 2.25rem;
+  }
+
+  .highlight {
+    font-size: 2.5rem;
+  }
+
+  .team-card-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .team-card-image {
+    flex: none;
+    width: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team {
+    padding: 3rem 1.5rem;
+  }
+
+  .team-heading h2 {
+    font-size: 1.75rem;
+  }
+
+  .highlight {
+    font-size: 2rem;
+  }
+
+  .team-card-details h2 {
+    font-size: 1.3rem;
+  }
+
+  .team-card-details p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .team {
+    padding: 2rem 1rem;
+  }
+
+  .team-heading h2 {
+    font-size: 1.5rem;
+  }
+
+  .highlight {
+    font-size: 1.75rem;
+  }
+
+  .team-card-details h2 {
+    font-size: 1.2rem;
+  }
+
+  .team-card-details p {
+    font-size: 0.85rem;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr; /* Single column for small screens */
+  }
+}

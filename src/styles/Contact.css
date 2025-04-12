@@ -1,0 +1,137 @@
+/* Contact Section Styles */
+.contact {
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+  }
+  
+  .contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .contact-content {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .contact-map {
+    flex: 0 0 50%;
+  }
+  
+  .contact-details {
+    flex: 0 0 50%;
+  }
+  
+  .details-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .contact-details h2 {
+    font-size: 2.5rem;
+    color: #1E88E5; /* Blue from logo */
+    margin-bottom: 1rem;
+  }
+  
+  .lead {
+    font-size: 1.2rem;
+    color: #8D6E63; /* Brown from logo */
+    margin-bottom: 2rem;
+  }
+  
+  .contact-info {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-direction: row;
+  }
+  
+  .info-icon {
+    color: #00C4B4; /* Teal green from logo */
+  }
+  
+  .contact-info h4 {
+    font-size: 1.5rem;
+    color: #1E88E5; /* Blue from logo */
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-info address,
+  .contact-info p {
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+  }
+  
+  .contact-info .link {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .contact-info .link:hover {
+    color: #00C4B4; /* Teal green on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .contact-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .contact-map,
+    .contact-details {
+      flex: 0 0 100%;
+    }
+  
+    .contact-map iframe {
+      height: 400px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .contact {
+      padding: 3rem 1rem;
+    }
+  
+    .contact-details h2 {
+      font-size: 2rem;
+    }
+  
+    .lead {
+      font-size: 1rem;
+    }
+  
+    .contact-info h4 {
+      font-size: 1.3rem;
+    }
+  
+    .contact-info address,
+    .contact-info p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact-details h2 {
+      font-size: 1.5rem;
+    }
+  
+    .lead {
+      font-size: 0.9rem;
+    }
+  
+    .contact-info h4 {
+      font-size: 1.2rem;
+    }
+  
+    .contact-info address,
+    .contact-info p {
+      font-size: 0.8rem;
+    }
+  
+    .contact-map iframe {
+      height: 300px;
+    }
+  }

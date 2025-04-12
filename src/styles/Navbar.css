@@ -1,0 +1,114 @@
+/* Navbar Styles */
+.navbar {
+  background-color: #0B46A4; /* Deep blue for a professional, calming clinic vibe */
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for modern depth */
+}
+
+/* Navbar Container */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo Styles */
+.navbar-logo img{
+height: 41px;
+width: 100%;
+/* background-color: white; */
+}
+
+.navbar-logo a {
+  text-decoration: none;
+}
+
+/* Toggle Button Styles (Visible on Mobile) */
+.navbar-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none; /* Hidden on larger screens */
+}
+
+.navbar-toggle svg {
+  color: #7CBC1F; /* Green for consistency */
+  font-size: 1.8rem; /* Slightly larger for touch-friendliness */
+}
+
+/* Menu Styles */
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+}
+
+.navbar-item a {
+  color: #FFFFFF; /* White for contrast against deep blue background */
+  text-decoration: none;
+  font-weight: 500; /* Medium weight for modern simplicity */
+  font-size: 1.1rem;
+  transition: color 0.2s ease; /* Smooth hover transition */
+}
+
+.navbar-item a:hover {
+  color: #7CBC1F; /* Green on hover for interactivity */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Show toggle button on mobile */
+  .navbar-toggle {
+      display: block;
+  }
+
+  /* Menu styles for mobile */
+  .navbar-menu {
+      position: fixed;
+      top: 0;
+      right: -100%; /* Hidden off-screen by default */
+      height: 100vh;
+      width: 250px;
+      background-color: #0B46A4; /* Same deep blue as navbar */
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2.5rem;
+      transition: right 0.3s ease-in-out;
+      box-shadow: -2px 0 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  }
+
+  /* Active state when menu is open */
+  .navbar-menu.active {
+      right: 0; /* Slide in from the right */
+  }
+
+  .navbar-item a {
+      font-size: 1.4rem; /* Slightly smaller for mobile */
+      color: #FFFFFF;
+  }
+
+  .navbar-item a:hover {
+      color: #7CBC1F;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+      padding: 0.8rem 1rem; /* Adjusted padding for smaller screens */
+  }
+
+  .navbar-logo h1 {
+      font-size: 1.3rem; /* Slightly smaller logo */
+  }
+
+  .navbar-toggle svg {
+      font-size: 1.6rem;
+  }
+}

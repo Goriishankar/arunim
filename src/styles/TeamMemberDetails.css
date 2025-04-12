@@ -1,0 +1,209 @@
+/* Team Member Details Section Styles */
+.team-member-details {
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+  }
+  
+  /* Heading Section */
+  .team-member-header {
+    margin-bottom: 2rem;
+  }
+  
+  .team-member-heading {
+    text-align: center;
+  }
+  
+  .team-member-heading h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #1E88E5; /* Blue from logo */
+  }
+  
+  .highlight {
+    color: #00C4B4; /* Teal green from logo */
+    font-family: 'Arial', sans-serif;
+    font-weight: normal;
+    font-size: 3.5rem;
+  }
+  
+  /* Team Member Content */
+  .team-member-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .team-member-content {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .team-member-image-card {
+    flex: 0 0 33.333%;
+  }
+  
+  .team-member-info-card {
+    flex: 0 0 66.667%;
+  }
+  
+  /* Card Styles */
+  .card {
+    background-color: #ffffff;
+    border-bottom: 3px solid #1E88E5; /* Blue border at the bottom */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .team-member-image-card .card {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .team-member-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #00C4B4; /* Teal green border */
+    margin-bottom: 1rem;
+  }
+  
+  .team-member-image-card h2 {
+    font-size: 1.5rem;
+    color: #8D6E63; /* Brown from logo */
+    margin-bottom: 0.5rem;
+  }
+  
+  .team-member-image-card h3 {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .team-member-info-card .card {
+    padding: 2rem;
+  }
+  
+  .info-title {
+    font-size: 1.5rem;
+    color: #1E88E5; /* Blue from logo */
+    margin-bottom: 0.5rem;
+  }
+  
+  .team-member-info-card hr {
+    border-color: #00C4B4; /* Teal green line */
+    margin: 0 0 1rem 0;
+  }
+  
+  .bio-text {
+    font-size: 1rem;
+    color: #333;
+    text-align: justify;
+    margin-bottom: 1rem;
+  }
+  
+  /* Back Link */
+  .back-link {
+    display: inline-block;
+    margin-top: 2rem;
+    color: #00C4B4; /* Teal green from logo */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .back-link:hover {
+    color: #1E88E5; /* Blue on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .team-member-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .team-member-image-card,
+    .team-member-info-card {
+      flex: 0 0 100%;
+      max-width: 600px;
+    }
+  
+    .team-member-heading h2 {
+      font-size: 2.5rem;
+    }
+  
+    .highlight {
+      font-size: 3rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .team-member-details {
+      padding: 3rem 1rem;
+    }
+  
+    .team-member-heading h2 {
+      font-size: 2rem;
+    }
+  
+    .highlight {
+      font-size: 2.5rem;
+    }
+  
+    .team-member-image-card .card,
+    .team-member-info-card .card {
+      padding: 1.5rem;
+    }
+  
+    .team-member-img {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .team-member-image-card h2 {
+      font-size: 1.3rem;
+    }
+  
+    .team-member-image-card h3 {
+      font-size: 0.9rem;
+    }
+  
+    .info-title {
+      font-size: 1.3rem;
+    }
+  
+    .bio-text {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .team-member-heading h2 {
+      font-size: 1.5rem;
+    }
+  
+    .highlight {
+      font-size: 2rem;
+    }
+  
+    .team-member-img {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .team-member-image-card h2 {
+      font-size: 1.2rem;
+    }
+  
+    .team-member-image-card h3 {
+      font-size: 0.8rem;
+    }
+  
+    .info-title {
+      font-size: 1.2rem;
+    }
+  
+    .bio-text {
+      font-size: 0.8rem;
+    }
+  }
