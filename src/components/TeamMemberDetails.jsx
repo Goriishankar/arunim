@@ -1,5 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import '../styles/TeamMemberDetails.css';
+import teamMember1Image from '../assets/team-member1.jpg'; // Image for Dr. Arun Sharma
+import teamMember2Image from '../assets/team-member2.jpg'; // Image for Dr. Nisha Patel (adjust if needed)
 
 // Sample team member data (in a real app, this would come from a backend)
 const teamMembers = [
@@ -7,7 +9,7 @@ const teamMembers = [
     id: '1',
     name: 'Dr. Arun Sharma',
     designation: 'MPT - Orthopedic Physiotherapy',
-    image: 'https://via.placeholder.com/200', // Replace with actual image
+    image: teamMember1Image, // Use the imported image
     degrees: 'MPT, BPT',
     bio: [
       'Dr. Arun Sharma is an experienced physiotherapist from Jaipur with a special focus on orthopedic physiotherapy, rehabilitation, and pain management. After completing his studies at Rajasthan University of Health Sciences, Dr. Sharma pursued advanced training in orthopedic rehabilitation and manual therapy.',
@@ -19,10 +21,10 @@ const teamMembers = [
     id: '2',
     name: 'Dr. Nisha Patel',
     designation: 'MPT - Sports Physiotherapy',
-    image: 'https://via.placeholder.com/200', // Replace with actual image
+    image: teamMember2Image, // Use the imported image
     degrees: 'MPT, BPT',
     bio: [
-      'Dr. Nisha Patel is a dedicated sports physiotherapist based in Jaipur, specializing in injury recovery and performance enhancement for athletes. She completed her education at Gujarat University and received specialized training in sports rehabilitation.',
+      'Dr. Nisha Patel is a dedicated sports physiotherapist based in Jaipur, specializing in injury recovery performance enhancement for athletes. She completed her education at Gujarat University and received specialized training in sports rehabilitation.',
       'Dr. Patel’s areas of expertise include sports physiotherapy, injury prevention, and performance optimization. She frequently collaborates with local sports teams and conducts workshops on safe training practices.',
       'She is available for consultations at Arunim Physiotherapy Clinic in Jaipur with prior appointments.',
     ],

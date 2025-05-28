@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import '../styles/Testimonials.css';
 
 const Testimonials = () => {
-  // Sample testimonials data
   const testimonials = [
     {
       quote: 'The physiotherapy sessions at Arunim were a game-changer for my back pain. The staff is incredibly supportive and knowledgeable!',
@@ -27,21 +26,24 @@ const Testimonials = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const totalItems = testimonials.length;
+  const visibleItems = 10; // Number of items visible at a time on desktop
+  const extendedTestimonials = [...testimonials, ...testimonials]; // Duplicate for infinite loop
 
-  // Automatic scrolling every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === testimonials.length - 3 ? 0 : prevIndex + 1
-      );
-    }, 5000); // 5 seconds
+      setCurrentIndex((prevIndex) => {
+        const newIndex = (prevIndex + 1) % extendedTestimonials.length;
+        // When we reach the end of the first set, continue scrolling seamlessly
+        return newIndex;
+      });
+    }, 2500); // 2.5 seconds scroll interval
 
-    return () => clearInterval(interval); // Cleanup on unmount
-  }, [testimonials.length]);
+    return () => clearInterval(interval);
+  }, [extendedTestimonials.length]);
 
   return (
     <section id="scrollspyTestimonials" className="testimonials">
-      {/* Heading Section */}
       <div className="testimonials-header">
         <div className="testimonials-heading">
           <h2>
@@ -51,17 +53,16 @@ const Testimonials = () => {
         </div>
       </div>
 
-      {/* Testimonials Carousel */}
       <div className="testimonials-container">
         <div className="testimonials-carousel">
           <div
             className="testimonials-track"
             style={{
-              transform: `translateX(-${currentIndex * (100 / 3)}%)`,
+              transform: `translateX(-${(currentIndex * 100) / visibleItems}%)`,
               transition: 'transform 0.5s ease-in-out',
             }}
           >
-            {testimonials.map((testimonial, index) => (
+            {extendedTestimonials.map((testimonial, index) => (
               <div className="testimonial-card" key={index}>
                 <div className="card">
                   <figure>

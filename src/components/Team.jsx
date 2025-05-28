@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../styles/Team.css';
-import TeamMemberImage from '../assets/team-member1.png';
+import TeamMemberImage from '../assets/team-member1.jpg';
+import TeamMember2Image from '../assets/team-member2.jpg';
 
 const Team = () => {
   return (
@@ -55,7 +56,7 @@ const Team = () => {
             <div className="team-card-content">
             <div className="team-card-image">
                 <img
-                  src={TeamMemberImage}
+                  src={TeamMember2Image}
                   alt="Dr. Arun Sharma"
                   className="team-img"
                 />
