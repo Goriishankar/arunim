@@ -13,7 +13,7 @@ const Footer = () => {
             <div className="credits">
               Built by{' '}
               <a href="/" target="_blank" rel="noopener noreferrer">
-                <b>RK</b>
+                <b>Guri</b>
               </a>{' '}
               with <span className="heart">♥</span>
             </div>

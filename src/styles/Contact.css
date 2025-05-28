@@ -1,4 +1,4 @@
-.contact {
+.contact-info {
   background: linear-gradient(135deg, #f8f9fa 0%, #e3f2fd 100%);
   padding: 60px 20px;
 }
@@ -6,103 +6,103 @@
 .contact-container {
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.contact-title {
-  font-size: 2.5rem;
-  color: #333;
-  text-align: center;
-  margin-bottom: 40px;
-  font-weight: 700;
-}
-
-.contact-title .highlight {
-  color: #007bff;
-}
-
-.contact-content {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
   justify-content: space-between;
 }
 
-.contact-map {
+.contact-column {
   flex: 1;
   min-width: 300px;
-  height: 450px; /* Adjusted height for desktop */
+}
+
+/* Contact Details */
+.contact-details {
+  background: #fff;
   border-radius: 15px;
-  overflow: hidden;
+  padding: 30px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   animation: fadeIn 0.8s ease-out;
 }
 
-.contact-details {
-  flex: 1;
-  min-width: 300px;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 15px;
-  padding: 30px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 0.8s ease-out 0.2s both;
-}
-
-.lead {
-  font-size: 1.1rem;
-  color: #555;
+.contact-heading {
+  font-size: 2.5rem;
+  color: #333;
   margin-bottom: 30px;
-  line-height: 1.6;
+  font-weight: 700;
 }
 
-.contact-info {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
+.contact-icon-box {
   margin-bottom: 20px;
-  padding: 15px;
-  background: #fff;
+  padding: 2px;
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.contact-info:hover {
+.contact-icon-box:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 15px rgba(0, 123, 255, 0.15);
 }
 
-.info-icon {
+.icon-box-icon {
   color: #007bff;
+  font-size: 1.5rem;
 }
 
-.contact-info h4 {
+.icon-box-icon a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.icon-box-content h3 {
   font-size: 1.3rem;
   color: #333;
   margin-bottom: 5px;
 }
 
-.contact-info p,
-.contact-info address {
+.icon-box-content h3 a {
+  color: #333;
+  text-decoration: none;
+}
+
+.icon-box-content h3 a:hover {
+  color: #007bff;
+}
+
+.icon-box-description {
   font-size: 1rem;
   color: #555;
-  margin: 0;
   line-height: 1.5;
+  margin: 0;
 }
 
-.contact-info address strong {
-  color: #333;
-}
-
-.contact-info .link {
+.icon-box-description a {
   color: #007bff;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.contact-info .link:hover {
+.icon-box-description a:hover {
   color: #005cb2;
   text-decoration: underline;
 }
 
+
+/* Google Map */
+.contact-map-column {
+  height: 460px; /* Adjusted height for desktop */
+}
+
+.contact-map {
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease-out 0.2s both;
+}
+
+/* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -114,21 +114,22 @@
   }
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
-  .contact {
+  .contact-info {
     padding: 40px 15px;
   }
 
-  .contact-title {
-    font-size: 2rem;
-  }
-
-  .contact-content {
+  .contact-container {
     flex-direction: column;
     gap: 20px;
   }
 
-  .contact-map {
+  .contact-heading {
+    font-size: 2rem;
+  }
+
+  .contact-map-column {
     height: 300px; /* Adjusted height for mobile */
   }
 
@@ -136,16 +137,20 @@
     padding: 20px;
   }
 
-  .contact-info {
+  .contact-icon-box {
     padding: 10px;
   }
 
-  .contact-info h4 {
+  .icon-box-content h3 {
     font-size: 1.2rem;
   }
 
-  .contact-info p,
-  .contact-info address {
+  .icon-box-description {
     font-size: 0.95rem;
+  }
+
+  .contact-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
   }
 }
