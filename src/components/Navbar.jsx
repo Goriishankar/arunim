@@ -5,7 +5,7 @@ import logo from '../assets/logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation(); // Get the current route
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -15,9 +15,7 @@ const Navbar = () => {
     setIsOpen(false);
   };
 
-  // Handle smooth scrolling for in-page sections
   const handleScroll = (sectionId) => {
-    // If we're on the homepage, scroll to the section
     if (location.pathname === '/') {
       const section = document.getElementById(sectionId);
       if (section) {
@@ -27,12 +25,17 @@ const Navbar = () => {
     closeMenu();
   };
 
+  // Helper to check if link is active
+  const isActive = (sectionId) => {
+    return location.hash === `#${sectionId}` || (sectionId === 'scrollspyNav' && location.hash === '');
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
         {/* Logo */}
         <div className="navbar-logo">
-          <Link to="/">
+          <Link to="/" onClick={closeMenu}>
             <img src={logo} alt="Arunim Physiotherapy Logo" />
           </Link>
         </div>
@@ -44,7 +47,6 @@ const Navbar = () => {
             width="24"
             height="24"
             fill="currentColor"
-            className="bi bi-list"
             viewBox="0 0 16 16"
           >
             <path
@@ -56,54 +58,24 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <ul className={`navbar-menu ${isOpen ? 'active' : ''}`}>
-          <li className="navbar-item">
-            <Link
-              to="/#scrollspyNav"
-              onClick={() => handleScroll('scrollspyNav')}
-            >
-              Home
-            </Link>
-          </li>
-          <li className="navbar-item">
-            <Link
-              to="/#scrollspyServices"
-              onClick={() => handleScroll('scrollspyServices')}
-            >
-              Services
-            </Link>
-          </li>
-          <li className="navbar-item">
-            <Link
-              to="/#scrollspyTeam"
-              onClick={() => handleScroll('scrollspyTeam')}
-            >
-              Team
-            </Link>
-          </li>
-          <li className="navbar-item">
-            <Link
-              to="/#scrollspyPortfolio"
-              onClick={() => handleScroll('scrollspyPortfolio')}
-            >
-              Portfolio
-            </Link>
-          </li>
-          <li className="navbar-item">
-            <Link
-              to="/#scrollspyTestimonials"
-              onClick={() => handleScroll('scrollspyTestimonials')}
-            >
-              Testimonials
-            </Link>
-          </li>
-          <li className="navbar-item">
-            <Link
-              to="/#scrollspyContact"
-              onClick={() => handleScroll('scrollspyContact')}
-            >
-              Contact
-            </Link>
-          </li>
+          {[
+            { id: 'scrollspyNav', label: 'Home' },
+            { id: 'scrollspyServices', label: 'Services' },
+            { id: 'scrollspyTeam', label: 'Team' },
+            { id: 'scrollspyPortfolio', label: 'Portfolio' },
+            { id: 'scrollspyTestimonials', label: 'Testimonials' },
+            { id: 'scrollspyContact', label: 'Contact' },
+          ].map((item) => (
+            <li key={item.id} className="navbar-item">
+              <Link
+                to={`/#${item.id}`}
+                className={isActive(item.id) ? 'active' : ''}
+                onClick={() => handleScroll(item.id)}
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>

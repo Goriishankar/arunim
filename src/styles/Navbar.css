@@ -1,114 +1,90 @@
-/* Navbar Styles */
 .navbar {
-  background-color: #0B46A4; /* Deep blue for a professional, calming clinic vibe */
-  padding: 1rem 2rem;
-  position: sticky;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for modern depth */
 }
 
-/* Navbar Container */
 .navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 10px 20px;
 }
 
-/* Logo Styles */
-.navbar-logo img{
-height: 41px;
-width: 100%;
-/* background-color: white; */
+.navbar-logo img {
+  height: 40px;
 }
 
-.navbar-logo a {
-  text-decoration: none;
-}
-
-/* Toggle Button Styles (Visible on Mobile) */
-.navbar-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: none; /* Hidden on larger screens */
-}
-
-.navbar-toggle svg {
-  color: #7CBC1F; /* Green for consistency */
-  font-size: 1.8rem; /* Slightly larger for touch-friendliness */
-}
-
-/* Menu Styles */
 .navbar-menu {
   display: flex;
   list-style: none;
-  gap: 2rem;
   margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  margin-left: 20px;
 }
 
 .navbar-item a {
-  color: #FFFFFF; /* White for contrast against deep blue background */
   text-decoration: none;
-  font-weight: 500; /* Medium weight for modern simplicity */
-  font-size: 1.1rem;
-  transition: color 0.2s ease; /* Smooth hover transition */
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 12px;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .navbar-item a:hover {
-  color: #7CBC1F; /* Green on hover for interactivity */
+  color: #007bff;
 }
 
-/* Responsive Design */
+.navbar-item a.active {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
 @media (max-width: 768px) {
-  /* Show toggle button on mobile */
   .navbar-toggle {
-      display: block;
+    display: block;
   }
 
-  /* Menu styles for mobile */
   .navbar-menu {
-      position: fixed;
-      top: 0;
-      right: -100%; /* Hidden off-screen by default */
-      height: 100vh;
-      width: 250px;
-      background-color: #0B46A4; /* Same deep blue as navbar */
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 2.5rem;
-      transition: right 0.3s ease-in-out;
-      box-shadow: -2px 0 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
-  /* Active state when menu is open */
   .navbar-menu.active {
-      right: 0; /* Slide in from the right */
+    display: flex;
+  }
+
+  .navbar-item {
+    margin: 10px 0;
   }
 
   .navbar-item a {
-      font-size: 1.4rem; /* Slightly smaller for mobile */
-      color: #FFFFFF;
-  }
-
-  .navbar-item a:hover {
-      color: #7CBC1F;
-  }
-}
-
-@media (max-width: 480px) {
-  .navbar {
-      padding: 0.8rem 1rem; /* Adjusted padding for smaller screens */
-  }
-
-  .navbar-logo h1 {
-      font-size: 1.3rem; /* Slightly smaller logo */
-  }
-
-  .navbar-toggle svg {
-      font-size: 1.6rem;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
   }
 }
