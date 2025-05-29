@@ -1,4 +1,6 @@
 import ServiceIcon from '../assets/Service1.png';
+import ServiceIcon2 from '../assets/Service2.png';
+import ServiceIcon3 from '../assets/Service3.png';
 import '../styles/Services.css';
 
 const Services = () => {
@@ -8,8 +10,8 @@ const Services = () => {
       <div className="services-header">
         <div className="services-heading">
           <h2>
-            Expert Care with our{' '}
-            <span className="highlight">proficient</span> services
+            Expert Care with Our{' '}
+            <span className="highlight">Proficient</span> Services
           </h2>
         </div>
       </div>
@@ -23,6 +25,7 @@ const Services = () => {
               <img
                 src={ServiceIcon}
                 alt="Physiotherapy Consultation Icon"
+                className="service-image"
               />
             </div>
             <h4>Physiotherapy Consultation</h4>
@@ -33,10 +36,11 @@ const Services = () => {
 
           {/* Service Card 2 */}
           <div className="service-card">
-          <div className="service-icon">
+            <div className="service-icon">
               <img
-                src={ServiceIcon}
-                alt="Physiotherapy Consultation Icon"
+                src={ServiceIcon2}
+                alt="Manual Therapy Icon"
+                className="service-image"
               />
             </div>
             <h4>Manual Therapy</h4>
@@ -47,10 +51,11 @@ const Services = () => {
 
           {/* Service Card 3 */}
           <div className="service-card">
-          <div className="service-icon">
+            <div className="service-icon">
               <img
-                src={ServiceIcon}
-                alt="Physiotherapy Consultation Icon"
+                src={ServiceIcon3}
+                alt="Electrotherapy Icon"
+                className="service-image"
               />
             </div>
             <h4>Electrotherapy</h4>
@@ -61,43 +66,16 @@ const Services = () => {
 
           {/* Service Card 4 */}
           <div className="service-card">
-          <div className="service-icon">
+            <div className="service-icon">
               <img
                 src={ServiceIcon}
-                alt="Physiotherapy Consultation Icon"
+                alt="Post-Surgery Rehabilitation Icon"
+                className="service-image"
               />
             </div>
             <h4>Post-Surgery Rehabilitation</h4>
             <p>
               Personalized programs to help patients recover strength, mobility, and function after surgical procedures.
-            </p>
-          </div>
-
-          {/* Service Card 5 */}
-          <div className="service-card">
-          <div className="service-icon">
-              <img
-                src={ServiceIcon}
-                alt="Physiotherapy Consultation Icon"
-              />
-            </div>
-            <h4>Sports Therapy</h4>
-            <p>
-              Specialized care for athletes to recover from injuries, enhance performance, and prevent future issues.
-            </p>
-          </div>
-
-          {/* Service Card 6 */}
-          <div className="service-card">
-          <div className="service-icon">
-              <img
-                src={ServiceIcon}
-                alt="Physiotherapy Consultation Icon"
-              />
-            </div>
-            <h4>Chronic Pain Management</h4>
-            <p>
-              Holistic approaches to manage and alleviate chronic pain conditions like fibromyalgia and lower back pain.
             </p>
           </div>
         </div>

@@ -24,7 +24,7 @@ const Hero = () => {
             </li>
           </ul>
           <div className="hero-buttons">
-            <a href="https://web.whatsapp.com/" className="cta-button">
+            <a href="/" className="cta-button">
               Book Now
             </a>
           </div>

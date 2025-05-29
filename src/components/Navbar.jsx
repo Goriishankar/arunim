@@ -62,7 +62,7 @@ const Navbar = () => {
             { id: 'scrollspyNav', label: 'Home' },
             { id: 'scrollspyServices', label: 'Services' },
             { id: 'scrollspyTeam', label: 'Team' },
-            { id: 'scrollspyPortfolio', label: 'Portfolio' },
+            { id: 'scrollspyPortfolio', label: 'Gallery' },
             { id: 'scrollspyTestimonials', label: 'Testimonials' },
             { id: 'scrollspyContact', label: 'Contact' },
           ].map((item) => (

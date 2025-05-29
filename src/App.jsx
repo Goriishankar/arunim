@@ -9,6 +9,7 @@ import Gallery from './components/Gallery';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import WhatsAppButton from './components/WhatsAppButton';
 import './App.css';
 
 function App() {
@@ -25,8 +26,8 @@ function App() {
                 <Hero />
                 <Services />
                 <Team />
-                <Portfolio />
                 <Testimonials />
+                <Portfolio />
                 <Contact />
               </>
             }
@@ -36,6 +37,7 @@ function App() {
           {/* Gallery Route */}
           <Route path="/gallery" element={<Gallery />} />
         </Routes>
+        <WhatsAppButton />
         <Footer />
       </div>
     </Router>
